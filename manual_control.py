@@ -102,10 +102,6 @@ class FrontEnd(object):
         """ Update velocities based on key pressed
         Arguments:
             key: pygame key
-
-        基于键的按下上传各个方向的速度
-        参数：
-            key：pygame事件循环中的键事件
         """
         if key == manual_control.K_UP:  # set forward velocity
             self.for_back_velocity = S
@@ -128,10 +124,6 @@ class FrontEnd(object):
         """ Update velocities based on key released
         Arguments:
             key: pygame key
-
-        基于键的松开上传各个方向的速度
-        参数：
-            key：pygame事件循环中的键事件
         """
         if key == manual_control.K_UP or key == manual_control.K_DOWN:  # set zero forward/backward velocity
             self.for_back_velocity = 0
@@ -150,8 +142,6 @@ class FrontEnd(object):
 
     def update(self):
         """ Update routine. Send velocities to Tello.
-
-            向Tello发送各方向速度信息
         """
         if self.send_rc_control:
             self.tello.send_rc_control(self.left_right_velocity, self.for_back_velocity,
