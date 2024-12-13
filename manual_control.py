@@ -27,7 +27,6 @@ class FrontEnd(object):
         pygame.init()
 
         # Creat pygame window
-        # 创建pygame窗口
         pygame.display.set_caption("Tello video stream")
         self.screen = pygame.display.set_mode([960, 720])
 

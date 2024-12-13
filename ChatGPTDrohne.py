@@ -25,7 +25,6 @@ class FrontEnd(object):
 
     def __init__(self):
         # Init pygame
-        # 初始化pygame
         pygame.init()
 
         # Creat pygame window
