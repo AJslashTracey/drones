@@ -147,7 +147,7 @@ class FrontEnd(object):
             self.tello.send_rc_control(self.left_right_velocity, self.for_back_velocity,
                 self.up_down_velocity, self.yaw_velocity)
     
-    def func(self):
+    def func(self): # Get image and send it to ChatGPT to evaluate
         frame_read = self.tello.get_frame_read()
         
         # Attempt to capture a non-black frame
