@@ -56,7 +56,7 @@ def getChatGPTResponse(image_path):
     chat_response = response.choices[0].message.content
 
     # Save the response to a CSV file
-    # Juris file path csv_file_path = r"C:\Users\juris\OneDrive\Documenten\GitHub\drones\responses\response.csv"
+    csv_file_path = os.path.join("responses", "response3.csv")
     save_response_to_csv(chat_response, csv_file_path)
 
     return chat_response
